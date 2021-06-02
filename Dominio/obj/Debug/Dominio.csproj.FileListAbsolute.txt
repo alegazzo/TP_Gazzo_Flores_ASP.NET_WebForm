@@ -16,3 +16,9 @@ C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Do
 C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Dominio\obj\Debug\Dominio.dll
 C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Sebastian\Desktop\TP\TP_Gazzo_Flores_ASP.NET_WebForm\Dominio\bin\Debug\Dominio.dll
+C:\Users\Sebastian\Desktop\TP\TP_Gazzo_Flores_ASP.NET_WebForm\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Sebastian\Desktop\TP\TP_Gazzo_Flores_ASP.NET_WebForm\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Sebastian\Desktop\TP\TP_Gazzo_Flores_ASP.NET_WebForm\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Sebastian\Desktop\TP\TP_Gazzo_Flores_ASP.NET_WebForm\Dominio\obj\Debug\Dominio.dll
+C:\Users\Sebastian\Desktop\TP\TP_Gazzo_Flores_ASP.NET_WebForm\Dominio\obj\Debug\Dominio.pdb
