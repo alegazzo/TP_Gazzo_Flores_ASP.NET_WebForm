@@ -13,10 +13,21 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //obtenemos el id por url.
+            int id = int.Parse(Request.QueryString["id"]);
+            //listado se carga con la lista guardada en session.
+            List<Articulo> listado = (List<Articulo>)Session["listado"];
+            //buscamo en el listado el articulo con el id obtenido previamente.
+            Articulo articulo = listado.Find(x => x.Id == id);
 
-            string id = Request.QueryString["id"];
-
-
+            //se cargan los labels con la informacion del articulo correspondiente.
+            LabelNombre.Text = articulo.Nombre;
+            LabelCodigo.Text = articulo.Codigo;
+            LabelDescripcion.Text = articulo.Descripcion;
+            LabelUrlImagen.Text = articulo.ImagenUrl;
+            LabelPrecio.Text =  Convert.ToString(articulo.Precio);
+                
+            
         }
     }
 }

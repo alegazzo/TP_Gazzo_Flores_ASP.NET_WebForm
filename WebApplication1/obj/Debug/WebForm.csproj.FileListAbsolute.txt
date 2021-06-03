@@ -156,3 +156,9 @@ C:\Users\Sebastian\Desktop\TP\TP_Gazzo_Flores_ASP.NET_WebForm\WebApplication1\bi
 C:\Users\Sebastian\Desktop\TP\TP_Gazzo_Flores_ASP.NET_WebForm\WebApplication1\bin\Datos.pdb
 C:\Users\Sebastian\Desktop\TP\TP_Gazzo_Flores_ASP.NET_WebForm\WebApplication1\bin\Dominio.pdb
 C:\Users\Sebastian\Desktop\TP\TP_Gazzo_Flores_ASP.NET_WebForm\WebApplication1\bin\Negocio.pdb
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\TP_Gazzo_Flores_ASP.NET_WebForm\WebApplication1\bin\Datos.dll
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\TP_Gazzo_Flores_ASP.NET_WebForm\WebApplication1\bin\Dominio.dll
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\TP_Gazzo_Flores_ASP.NET_WebForm\WebApplication1\bin\Negocio.dll
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\TP_Gazzo_Flores_ASP.NET_WebForm\WebApplication1\bin\Datos.pdb
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\TP_Gazzo_Flores_ASP.NET_WebForm\WebApplication1\bin\Dominio.pdb
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\TP_Gazzo_Flores_ASP.NET_WebForm\WebApplication1\bin\Negocio.pdb
