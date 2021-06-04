@@ -1,11 +1,41 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="DetalleArticulo.aspx.cs" Inherits="WebApplication1.DetalleArticulo" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>Detalle Articulo</h1>
-    <%--labels donde se muestra el detalle del articulo seleccionado.--%>
-    <asp:Label Text="text" ID="LabelNombre" runat="server" />
-    <asp:Label Text="text" ID="LabelDescripcion" runat="server" />
-    <asp:Label Text="text" ID="LabelUrlImagen" runat="server" />
-    <asp:Label Text="text" ID="LabelCodigo" runat="server" />
-    <asp:Label Text="text" ID="LabelPrecio" runat="server" />
+
+
+
+
+
+
+
+    <%foreach (Dominio.Articulo item in listado)
+
+        {%>
+        
+         <%if (item.Id == id)
+             { %> 
+
+                       <div class="card mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="<% =item.ImagenUrl %>" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title"><% =item.Nombre %></h5>
+                    <p class="card-text"><% = item.Descripcion %></p>
+                    <p class="card-text"><small class="text-muted"><%=item.Precio %></small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+        <% } %>   
+ 
+   <% } %>
+
+
 </asp:Content>
