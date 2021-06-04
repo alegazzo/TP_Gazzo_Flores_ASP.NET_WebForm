@@ -1,10 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Carrito.aspx.cs" Inherits="WebApplication1.Carrito" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h1> Carrito</h1>
+    <h1>Carrito</h1>
 
-
-<div class="row">
-
+     <%-- <%int bandera = 0; %>--%>
+    <div class="row">
+      
         <% foreach (Dominio.Articulo item in listadoCarrito)
             {%>
 
@@ -16,11 +17,18 @@
                         <h5 class="card-title"><% = item.Nombre %></h5>
                         <p class="card-text"><% =item.Descripcion %></p>
                         <a href="DetalleArticulo?id=<% = item.Id %>" class="btn btn-primary">Detalle</a>
-                       
+
                     </div>
                 </div>
             </div>
+                 <%--   <%bandera++;
+                        if (bandera == 0)
+                        {
+                    %>
 
+                    <h2>Tu carrito esta vacio</h2>
+
+                    <%  } %>--%>
 
         <%} %>
     </div>

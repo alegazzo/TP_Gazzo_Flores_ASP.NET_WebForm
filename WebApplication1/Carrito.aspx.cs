@@ -16,28 +16,39 @@ namespace WebApplication1
         public int id;
         public List<Articulo> listado;
         public static List<Articulo> listadoCarrito = new List<Articulo>();
+      
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
             try
             {
-                id = int.Parse(Request.QueryString["id"]);
+                
+                if (!string.IsNullOrWhiteSpace(Request.QueryString["id"])) {
 
-                listado = (List<Articulo>)Session["listado"];
+                    
+                    id = int.Parse(Request.QueryString["id"]);
 
-                Articulo articulo = listado.Find(x => x.Id == id);
+                    listado = (List<Articulo>)Session["listado"];
 
-                listadoCarrito.Add(articulo);
+                    Articulo articulo = listado.Find(x => x.Id == id);
+
+                    listadoCarrito.Add(articulo);
+                    
+                }
+               
 
             }
             catch (Exception)
             {
 
                 Response.Redirect("Error.aspx");
+               
             }
 
 
             
         }
+
+
     }
 }

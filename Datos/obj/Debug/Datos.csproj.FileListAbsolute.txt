@@ -16,3 +16,9 @@ C:\Users\Sebastian\Desktop\TP\TP_Gazzo_Flores_ASP.NET_WebForm\Datos\obj\Debug\Da
 C:\Users\Sebastian\Desktop\TP\TP_Gazzo_Flores_ASP.NET_WebForm\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
 C:\Users\Sebastian\Desktop\TP\TP_Gazzo_Flores_ASP.NET_WebForm\Datos\obj\Debug\Datos.dll
 C:\Users\Sebastian\Desktop\TP\TP_Gazzo_Flores_ASP.NET_WebForm\Datos\obj\Debug\Datos.pdb
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\TP_Gazzo_Flores_ASP.NET_WebForm\Datos\bin\Debug\Datos.dll
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\TP_Gazzo_Flores_ASP.NET_WebForm\Datos\bin\Debug\Datos.pdb
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\TP_Gazzo_Flores_ASP.NET_WebForm\Datos\obj\Debug\Datos.csprojAssemblyReference.cache
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\TP_Gazzo_Flores_ASP.NET_WebForm\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\TP_Gazzo_Flores_ASP.NET_WebForm\Datos\obj\Debug\Datos.dll
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\TP_Gazzo_Flores_ASP.NET_WebForm\Datos\obj\Debug\Datos.pdb
