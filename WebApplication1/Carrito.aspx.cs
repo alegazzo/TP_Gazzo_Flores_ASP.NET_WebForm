@@ -15,7 +15,7 @@ namespace WebApplication1
     {
         public int id;
         public List<Articulo> listado;
-        public static List<Articulo> listadoCarrito;
+        public static List<Articulo> listadoCarrito = new List<Articulo>();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -27,7 +27,7 @@ namespace WebApplication1
 
                 Articulo articulo = listado.Find(x => x.Id == id);
 
-                //listadoCarrito.Add(articulo);
+                listadoCarrito.Add(articulo);
 
             }
             catch (Exception)
