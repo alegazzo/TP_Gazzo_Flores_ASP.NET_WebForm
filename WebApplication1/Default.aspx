@@ -3,9 +3,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h1>Home</h1>
+    <h1 class="home">Home</h1>
 
-    <h1>Productos</h1>
+    <h1 id="Productos">Productos</h1>
 
     <div class="row">
 

@@ -15,24 +15,71 @@ namespace WebApplication1
     {
         public int id;
         public List<Articulo> listado;
-        public static List<Articulo> listadoCarrito = new List<Articulo>();
-      
+        public static List<ItemCarrito> listadoCarrito;
+        
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+             
             try
             {
                 
-                if (!string.IsNullOrWhiteSpace(Request.QueryString["id"])) {
+                
+                listadoCarrito = (List<ItemCarrito>)Session["listaFavoritos"];
 
+                if (listadoCarrito == null) 
+                  listadoCarrito = new List<ItemCarrito>();
                     
-                    id = int.Parse(Request.QueryString["id"]);
+                
+                    
+                if (Request.QueryString["id"] != null) {
 
-                    listado = (List<Articulo>)Session["listado"];
+                    if (string.IsNullOrWhiteSpace(Request.QueryString["e"]))
+                    {
+                        id = int.Parse(Request.QueryString["id"]);
 
-                    Articulo articulo = listado.Find(x => x.Id == id);
+                        listado = (List<Articulo>)Session["listado"];
 
-                    listadoCarrito.Add(articulo);
+                        Articulo articulo = listado.Find(x => x.Id == id);
+                        if (listadoCarrito.Find(x => x.Articulo.Id.ToString() == Request.QueryString["id"]) == null)
+                        {
+                            ItemCarrito item = new ItemCarrito(articulo, 1);
+                            listadoCarrito.Add(item);
+                            Session.Add("listaFavoritos", listadoCarrito);
+                        }
+                        else
+                        {
+                        
+                            ItemCarrito item = listadoCarrito.Find(x => x.Articulo.Id == id);
+                            item.agregarItem(1);
+                            Session.Add("listaFavoritos", listadoCarrito);
+                        }
+                    }
+                    else
+                    {
+                        if (string.IsNullOrWhiteSpace(Request.QueryString["r"]))
+                        {
+                            id = int.Parse(Request.QueryString["id"]);
+                            ItemCarrito item = listadoCarrito.Find(x => x.Articulo.Id == id);
+
+                            listadoCarrito.Remove(item);
+                            Session.Add("listaFavoritos", listadoCarrito);
+                        }
+                        else
+                        {
+                            id = int.Parse(Request.QueryString["id"]);
+
+                            ItemCarrito item = listadoCarrito.Find(x => x.Articulo.Id == id);
+
+                            item.restarItem();
+                            if (item.Cantidad == 0)
+                            {
+                                listadoCarrito.Remove(item);
+                            }
+                            Session.Add("listaFavoritos", listadoCarrito);
+                        }
+                    }
                     
                 }
                

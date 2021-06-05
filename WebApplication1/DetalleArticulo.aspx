@@ -27,6 +27,7 @@
                     <h5 class="card-title"><% =item.Nombre %></h5>
                     <p class="card-text"><% = item.Descripcion %></p>
                     <p class="card-text"><small class="text-muted"><%=item.Precio %></small></p>
+                    <a href="Carrito?id=<% = item.Id %>" class="btn btn-primary">Agregar al carrito</a>
                   </div>
                 </div>
               </div>
