@@ -24,9 +24,9 @@
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title"><% =item.Nombre %></h5>
+                    <h4 class="card-title"><% =item.Nombre %></h4>
                     <p class="card-text"><% = item.Descripcion %></p>
-                    <p class="card-text"><small class="text-muted"><%=item.Precio %></small></p>
+                    <h5 class="card-text"><small class="text-muted"><%=item.Precio %></small></h5>
                     <a href="Carrito?id=<% = item.Id %>" class="btn btn-primary">Agregar al carrito</a>
                   </div>
                 </div>

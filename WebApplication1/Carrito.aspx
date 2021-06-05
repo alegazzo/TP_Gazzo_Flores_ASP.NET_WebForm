@@ -17,7 +17,7 @@
                         <h5 class="card-title"><% = item.Articulo.Nombre %></h5>
                         <p class="card-text"><% =item.Articulo.Descripcion %></p>
                         <p class="card-text">cantidad:<% =item.Cantidad %></p>
-                        <p class="card-text">cantidad:<% =item.Articulo.Precio * item.Cantidad %></p>
+                        <h5 class="card-text">Precio:<% =item.Articulo.Precio * item.Cantidad %></h5>
                         <a href="DetalleArticulo?id=<% = item.Articulo.Id %>" class="btn btn-primary">Detalle</a>
                         <a href="Carrito?id=<% = item.Articulo.Id %>&e=t" class="btn btn-primary">Eliminar</a>
                         <a href="Carrito?id=<% = item.Articulo.Id %>&e=t&r=t" class="btn btn-primary">Quitar 1</a>
