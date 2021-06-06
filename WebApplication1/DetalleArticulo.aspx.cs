@@ -25,7 +25,7 @@ namespace WebApplication1
                 //listado se carga con la lista guardada en session.
                 listado = (List<Articulo>)Session["listado"];
                 //buscamo en el listado el articulo con el id obtenido previamente.
-                Articulo articulo = listado.Find(x => x.Id == id);
+                    Articulo articulo = listado.Find(x => x.Id == id);
 
                 //se cargan los labels con la informacion del articulo correspondiente.
             }

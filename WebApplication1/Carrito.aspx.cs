@@ -32,7 +32,7 @@ namespace WebApplication1
                   listadoCarrito = new List<ItemCarrito>();
                     
                 
-                    
+                        
                 if (Request.QueryString["id"] != null) {
 
                     if (string.IsNullOrWhiteSpace(Request.QueryString["e"]))
@@ -45,7 +45,7 @@ namespace WebApplication1
                         if (listadoCarrito.Find(x => x.Articulo.Id.ToString() == Request.QueryString["id"]) == null)
                         {
                             ItemCarrito item = new ItemCarrito(articulo, 1);
-                            listadoCarrito.Add(item);
+                              listadoCarrito.Add(item);
                             Session.Add("listaFavoritos", listadoCarrito);
                         }
                         else
@@ -82,8 +82,8 @@ namespace WebApplication1
                     }
                     
                 }
-               
 
+                //Response.Redirect("Carrito");
             }
             catch (Exception)
             {
@@ -93,7 +93,7 @@ namespace WebApplication1
             }
 
 
-            
+
         }
 
 
