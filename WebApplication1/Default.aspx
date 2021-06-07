@@ -9,22 +9,22 @@
 
 
 
+   
+    <section class= "home">
 
-    <section class="espacios home">
-
-        <h1>Home</h1>
+        
 
 
     </section>
 
 
 
-    <section class="espacios">
+    <section >
 
-        <h1 id="Productos">Productos</h1>
+        <h1 id="Productos" >Productos</h1>
 
-
-        <div class="row">
+        <div class="container">
+        <div class="row" style:"justify-content:center;">
 
             <% foreach (Dominio.Articulo item in lista)
                 {%>
@@ -35,7 +35,7 @@
                     <img src="<% =item.ImagenUrl %>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h4 class="card-title"><% = item.Nombre %></h4>
-                        <h5 class="card-text"><% =item.Precio %></h5>
+                        <h5 class="card-text">$<% = Math.Round(item.Precio,2) %></h5>
                         <p class="card-text"><% =item.Descripcion %></p>
                         <a href="DetalleArticulo?id=<% = item.Id %>" class="btn btn-primary">Detalle</a>
                         <a href="Carrito?id=<% = item.Id %>" class="btn btn-primary">Agregar al carrito</a>
@@ -47,7 +47,7 @@
             <%} %>
         </div>
 
-
+</div>
 
 
     </section>

@@ -2,30 +2,59 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Carrito</h1>
-   
 
-    <div class="row">
-      
+
+    <div class="card-contenedor">
+
         <% foreach (Dominio.ItemCarrito item in listadoCarrito)
             {%>
 
-            <div class="col-md-4">
+        <div class="item-carrito">
+            <div class="left-container">
 
-                <div class="card" style="width: 18rem;">
-                    <img src="<% =item.Articulo.ImagenUrl %>" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"><% = item.Articulo.Nombre %></h5>
-                        <p class="card-text"><% =item.Articulo.Descripcion %></p>
-                        <p class="card-text">cantidad:<% =item.Cantidad %></p>
-                        <h5 class="card-text">Precio:<% =item.Articulo.Precio * item.Cantidad %></h5>
-                        <a href="DetalleArticulo?id=<% = item.Articulo.Id %>" class="btn btn-primary">Detalle</a>
-                        <a href="Carrito?id=<% = item.Articulo.Id %>&e=t" class="btn btn-primary">Eliminar</a>
-                        <a href="Carrito?id=<% = item.Articulo.Id %>&e=t&r=t" class="btn btn-primary">Quitar 1</a>
-                        <a href="Carrito?id=<% = item.Articulo.Id %>" class="btn btn-primary">Agregar 1</a>
-                    </div>
+                <div class="imagenUrl">
+                    <img src="<% = item.Articulo.ImagenUrl %>" alt=".." />
                 </div>
+
+                <div class="descripcion">
+                    <h5 class="card-title"><% = item.Articulo.Nombre %></h5>
+                    <h5 class="card-text">$ <%  = Math.Round(item.Articulo.Precio * item.Cantidad,2) %></h5>
+                    <a href="DetalleArticulo?id=<% = item.Articulo.Id %>" class="btn btn-primary">Detalle</a>
+                </div>
+
             </div>
-               
+
+            <div class="right-container">
+
+                <div class="btn-quitar">
+                    <a href="Carrito?id=<% = item.Articulo.Id %>&e=t" class="btn btn-primary">Eliminar</a>
+                </div>
+
+
+                <div class="btn-cantidad">
+
+                    <div class="btn-cantidad-texto">
+                        <p class="card-text">Cantidad:<% =item.Cantidad %></p>
+                    </div>
+
+
+                    <div class="btn-cantidad-btn">
+                        <a href="Carrito?id=<% = item.Articulo.Id %>&e=t&r=t" class="btn btn-primary"><i class="fas fa-minus"></i></a>
+                        <a href="Carrito?id=<% = item.Articulo.Id %>" class="btn btn-primary"><i class="fas fa-plus"></i></a>
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
         <%} %>
     </div>
 
