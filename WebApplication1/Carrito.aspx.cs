@@ -24,13 +24,17 @@ namespace WebApplication1
              
             try
             {
-                
-                
+
+                float precio = 0;
                 listadoCarrito = (List<ItemCarrito>)Session["listaFavoritos"];
 
-                if (listadoCarrito == null) 
-                  listadoCarrito = new List<ItemCarrito>();
-                    
+                if (listadoCarrito == null)
+                {
+                    listadoCarrito = new List<ItemCarrito>();
+                    lblPrecio.Text = precio.ToString();
+
+                }
+                
                 
                         
                 if (Request.QueryString["id"] != null) {
@@ -80,10 +84,17 @@ namespace WebApplication1
                             Session.Add("listaFavoritos", listadoCarrito);
                         }
                     }
+                   
+                }
+                foreach (ItemCarrito item in listadoCarrito)
+                {
                     
+                    precio += (float)item.Articulo.Precio * item.Cantidad;
+
                 }
 
-                //Response.Redirect("Carrito");
+                lblPrecio.Text = precio.ToString();
+                
             }
             catch (Exception)
             {

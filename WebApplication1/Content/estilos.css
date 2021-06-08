@@ -112,16 +112,3 @@
     }
 
 
-.item-carrito .right-container .btn-cantidad .btn-cantidad-texto {
-    border: 2px solid red;
-
-}
-.item-carrito .right-container .btn-cantidad .btn-cantidad-btn {
-    border: 2px solid blue;
-
-}
-
-
-.item-carrito .right-container .btn-quitar {
-    border: 2px solid orange;
-}

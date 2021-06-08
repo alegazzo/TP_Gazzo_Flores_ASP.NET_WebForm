@@ -2,8 +2,10 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Carrito</h1>
-
-
+<%--    <%if (bandera==false)
+        { %>
+    <h2>Ups, tu carrito esta vacio</h2>
+    <%} %>--%>
     <div class="card-contenedor">
 
         <% foreach (Dominio.ItemCarrito item in listadoCarrito)
@@ -58,7 +60,7 @@
         <%} %>
     </div>
 
-    <h1>Total:</h1>
+    <h1>Total:</h1><asp:Label Text="text" id="lblPrecio" runat="server" />
 
 
 </asp:Content>
