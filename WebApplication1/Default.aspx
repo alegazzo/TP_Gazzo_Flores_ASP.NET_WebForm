@@ -11,32 +11,32 @@
 
    
     <section class= "home">
-
         
-
+        <div class="home-texto">
+        <h1>Gazzo & Flores</h1>
+        <a class="btn" href="/#Productos">Productos</a>
+        </div>
 
     </section>
 
 
 
-    <section >
+    <section class="productos">
 
-        <h1 id="Productos" >Productos</h1>
-         
-        <div class="container">
-        
-        
-        <div class="row" style:"justify-content:center;">
-         
+        <h1 id="Productos">Productos</h1>
 
-            <% foreach (Dominio.Articulo item in lista)
-               {%>
-            
-                <div class="col-md-4">
+        <div class="row grilla">
+
+           
+
+                <% foreach (Dominio.Articulo item in lista)
+                    {%>
+
+            <div class="col-md-4 fila-col">
 
                     <div class="card" style="width: 18rem;">
                         <img src="<% =item.ImagenUrl %>" class="card-img-top" alt="...">
-                        <div class="card-body">
+                        <div class="card-body" >
                             <h4 class="card-title"><% = item.Nombre %></h4>
                             <h5 class="card-text">$<% = Math.Round(item.Precio,2) %></h5>
                             <p class="card-text"><% =item.Descripcion %></p>
@@ -44,13 +44,13 @@
                             <a href="Carrito?id=<% = item.Id %>" class="btn btn-primary">Agregar al carrito</a>
                         </div>
                     </div>
-                </div>
+            </div>   
 
 
-            <% } %>
-        </div>
+                <% } %>
+            </div>
 
-</div>
+        
 
 
     </section>

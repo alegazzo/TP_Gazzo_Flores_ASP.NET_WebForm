@@ -21,7 +21,7 @@ namespace WebApplication1
 
         protected void Page_Load(object sender, EventArgs e)
         {
-             
+
             try
             {
 
@@ -34,10 +34,11 @@ namespace WebApplication1
                     lblPrecio.Text = precio.ToString();
 
                 }
-                
-                
-                        
-                if (Request.QueryString["id"] != null) {
+
+
+
+                if (Request.QueryString["id"] != null)
+                {
 
                     if (string.IsNullOrWhiteSpace(Request.QueryString["e"]))
                     {
@@ -49,12 +50,12 @@ namespace WebApplication1
                         if (listadoCarrito.Find(x => x.Articulo.Id.ToString() == Request.QueryString["id"]) == null)
                         {
                             ItemCarrito item = new ItemCarrito(articulo, 1);
-                              listadoCarrito.Add(item);
+                            listadoCarrito.Add(item);
                             Session.Add("listaFavoritos", listadoCarrito);
                         }
                         else
                         {
-                        
+
                             ItemCarrito item = listadoCarrito.Find(x => x.Articulo.Id == id);
                             item.agregarItem(1);
                             Session.Add("listaFavoritos", listadoCarrito);
@@ -75,16 +76,25 @@ namespace WebApplication1
                             id = int.Parse(Request.QueryString["id"]);
 
                             ItemCarrito item = listadoCarrito.Find(x => x.Articulo.Id == id);
-
-                            item.restarItem();
-                            if (item.Cantidad == 0)
-                            {
-                                listadoCarrito.Remove(item);
+                           
+                            if (item!=null) { 
+                                 item.restarItem();
+                                if (item.Cantidad == 0)
+                                {
+                                    listadoCarrito.Remove(item);
+                                }
+                        
+                                   Session.Add("listaFavoritos", listadoCarrito);
                             }
-                            Session.Add("listaFavoritos", listadoCarrito);
                         }
                     }
-                   
+
+                }
+                else if (Request.QueryString["c"] != null)
+                {
+                    listadoCarrito.Clear();
+                    Response.Write("<script>alert('Compra realizada con exito! ');</script>");
+                    Session.Add("listaFavoritos", listadoCarrito);
                 }
                 foreach (ItemCarrito item in listadoCarrito)
                 {
