@@ -24,9 +24,16 @@ namespace WebApplication1
 
             try
             {
-                lista = negocio.Listar();
-                //se guarda en session el listado de articulos.
-                Session.Add("listado", lista);
+                if (Request.QueryString["F"] == null) {
+                    lista = negocio.Listar();
+                    //se guarda en session el listado de articulos.
+                    Session.Add("listado", lista);
+                }
+                else
+                {
+                    lista = (List<Articulo>)Session["listafiltrada"];
+                }
+               
             }
             catch (Exception)
             {
@@ -35,10 +42,14 @@ namespace WebApplication1
             }
         }
 
-     
-
-
-
-
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string filtro = TextBox1.Text;
+            List<Articulo> listaArticulos = (List<Articulo>)Session["listado"];
+            List<Articulo> listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()));
+            Session.Add("listafiltrada", listaFiltrada);
+            Response.Redirect("Default?f=t");
+ 
+        }
     }
 }

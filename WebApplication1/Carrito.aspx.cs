@@ -26,7 +26,7 @@ namespace WebApplication1
             {
 
                 float precio = 0;
-                listadoCarrito = (List<ItemCarrito>)Session["listaFavoritos"];
+                listadoCarrito = (List<ItemCarrito>)Session["listacarrito"];
 
                 if (listadoCarrito == null)
                 {
@@ -51,14 +51,14 @@ namespace WebApplication1
                         {
                             ItemCarrito item = new ItemCarrito(articulo, 1);
                             listadoCarrito.Add(item);
-                            Session.Add("listaFavoritos", listadoCarrito);
+                            Session.Add("listacarrito", listadoCarrito);
                         }
                         else
                         {
 
                             ItemCarrito item = listadoCarrito.Find(x => x.Articulo.Id == id);
                             item.agregarItem(1);
-                            Session.Add("listaFavoritos", listadoCarrito);
+                            Session.Add("listacarrito", listadoCarrito);
                         }
                     }
                     else
@@ -69,7 +69,7 @@ namespace WebApplication1
                             ItemCarrito item = listadoCarrito.Find(x => x.Articulo.Id == id);
 
                             listadoCarrito.Remove(item);
-                            Session.Add("listaFavoritos", listadoCarrito);
+                            Session.Add("listacarrito", listadoCarrito);
                         }
                         else
                         {
@@ -84,7 +84,7 @@ namespace WebApplication1
                                     listadoCarrito.Remove(item);
                                 }
                         
-                                   Session.Add("listaFavoritos", listadoCarrito);
+                                   Session.Add("listacarrito", listadoCarrito);
                             }
                         }
                     }
@@ -94,7 +94,7 @@ namespace WebApplication1
                 {
                     listadoCarrito.Clear();
                     Response.Write("<script>alert('Compra realizada con exito! ');</script>");
-                    Session.Add("listaFavoritos", listadoCarrito);
+                    Session.Add("listacarrito", listadoCarrito);
                 }
                 foreach (ItemCarrito item in listadoCarrito)
                 {

@@ -24,7 +24,19 @@
     <section class="productos">
 
         <h1 id="Productos">Productos</h1>
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"><asp:TextBox ID="TextBox1" placeholder="Buscar" runat="server" type="search" CssClass="form-control me-2 filtro" ></asp:TextBox>
+            
+            </div>
+                <div class="col-md-4"><asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" CssClass="btn btn-primary" />   </div>
+            
 
+        </div>
+            
+
+        
+        
         <div class="row grilla">
 
            
